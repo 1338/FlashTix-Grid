@@ -21,6 +21,10 @@ Cause I can!
 
 ## How to run
 In the root directory install deps:
-`npm i esm`
+```bash
+npm i esm
+```
 Then run it via:
-`node server.js`
+```bash
+node server.js
+```
