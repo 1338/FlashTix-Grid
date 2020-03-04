@@ -9,8 +9,9 @@ Cause I can!
 ### TO-DO
 
  * Twitter API implementation (jQuery's plugin was with the old API, just recently got access to the API specifically for this project)
- * Googe Maps for pinning the concerts
+ * Googe Maps (for locations of concerts)
  * Check-out (orders)
+ * Agenda
 
 ### Finished
 
