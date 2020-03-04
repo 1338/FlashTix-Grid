@@ -29,3 +29,9 @@ Then run it via:
 ```bash
 node server.js
 ```
+#### Enable Twitter API
+Copy the .env.example to .env
+```bash
+cp .env.example .env
+```
+Add your customer key and secret (server will get bearer key for API calls)

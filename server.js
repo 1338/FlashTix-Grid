@@ -64,14 +64,17 @@ app.use(function (req, res, next) {
 
 app.post('/twitter', function (req, res) {
   if (req.body && req.body.screen_name) {
-    console.log('Looking up latest tweet for: ' + req.body.screen_name)
+    console.log(req.body)
     if (state.twitter.client !== false) {
+      console.log('Looking up latest tweet for: ' + req.body.screen_name)
       state.twitter.client.get('/statuses/user_timeline.json?tweet_mode=extended&screen_name=' + req.body.screen_name + '&count=1&exclude_replies=true&include_rts=false', function (error, tweets, response) {
         if (error) {
           res.send(error)
         }
         res.send(tweets[0])
       })
+    } else {
+      res.send({ error: 'no API access' })
     }
   }
 })

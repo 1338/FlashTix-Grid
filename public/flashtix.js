@@ -23,6 +23,9 @@ var app = {
         }
       }
       window.location.hash = response
+      if (response.includes('biopage')) {
+        app.scene.biopage.loadTwitter(response.replace('biopage-', ''))
+      }
     },
     onMenuClick: (e) => {
       app.scene.switchTo(e.target.hash.substring(1))
@@ -37,13 +40,52 @@ var app = {
     },
     biopage: {
       loadTwitter: (e) => {
-        console.log(e)
+        app.storage.getTweet(e)
+        // if (!tweet) {
+        //   console.log('dont have tweet from: ' + e)
+        // } else {
+        //   console.log(tweet)
+        // }
       }
     }
   },
   storage: {
     lsSupport: false,
     ls: false,
+    tweets: false,
+    getTweet: (name) => {
+      if (app.storage.lsSupport) {
+        let tweets = app.storage.ls.getItem('tweets')
+        if (tweets !== null) {
+          console.log(tweets)
+        }
+        app.storage.asyncTwitter(name).then((data) => {
+          let object = {
+            `${name}`: data
+          }
+          app.storage.ls.setItem('tweets', JSON.stringify({`${name}`: data}))
+        })
+      }
+      // we have to fetch
+
+      return false
+    },
+    asyncTwitter: async (name) => {
+      let response = await fetch(`/twitter`, {
+        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        mode: 'cors', // no-cors, *cors, same-origin
+        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        credentials: 'same-origin', // include, *same-origin, omit
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        redirect: 'follow', // manual, *follow, error
+        referrerPolicy: 'no-referrer', // no-referrer, *client
+        body: JSON.stringify({ screen_name: name }) // body data type must match "Content-Type" header
+      })
+      let data = await response.json()
+      return data
+    },
     getLastPage: () => { return (app.storage.lsSupport ? app.storage.ls.getItem('lastpage') : app.scene.last) },
     setLastPage: (newLast) => {
       if (document.getElementById(newLast)) {
