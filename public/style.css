@@ -1,0 +1,181 @@
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes slideinFromBottom {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 3rem;
+    width: 100%;
+    background: black;
+    color: white;
+    background: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+footer > a:first-child > .icon-wrapper > i {
+  padding-right: 10px;
+}
+
+footer > a:last-child > .icon-wrapper > i {
+  padding-left: 10px;
+}
+
+header {
+    background: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: stretch;
+    font-weight: bold;
+}
+
+header > a:first-child > .icon-wrapper > i {
+  padding-right: 10px;
+}
+
+header > a:last-child > .icon-wrapper > i {
+  padding-left: 10px;
+}
+
+.menu-link {
+  color: white;
+  text-decoration: none;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.menu-link:hover {
+  background-color: #48a0f7;
+}
+.menu-link:hover:active {
+  background-color: #2d89e6;
+}
+.menu-link > * {
+  pointer-events: none;
+}
+
+.page {
+    display: none;
+    min-height: calc(100vh - 3rem);
+    padding-bottom: 3rem;
+    grid-template-rows: 50px auto;
+    grid-template-columns: 100%;
+}
+
+.page[data-active="1"] {
+  animation: 0.2s ease-out 0s 1 slideinFromBottom;
+  display: grid;
+}
+main {
+    background: whitesmoke;
+    color: #444;
+    margin: 1rem;
+}
+
+.page#home > main {
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.page#home > main > img {
+  align-self: start;
+  justify-self: center;
+  max-width:100%;
+}
+
+.page#lastminute > main > category > h2 {
+    background: #1d1d1d;
+    padding: 10px;
+    margin:0;
+    color: white;
+}
+
+.page#lastminute > main > category:first-child > h2 {
+  border-radius: 15px 15px 0px 0px;
+}
+
+
+concert {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 12fr;
+  background-color: #F6F6F6;
+  margin: 0;
+  padding: 0;
+}
+concert:hover {
+  background-color: #EDEDED;
+}
+concert:not(:first-child) {
+    border-top: 0.5px solid #5b5959;
+}
+concert > * {
+  pointer-events: none;
+}
+
+concert-info {
+  display: grid;
+  margin: 0;
+  padding: 10px;
+}
+concert-info > h3, p {
+  align-self: start;
+  margin: 5px;
+  padding: 0;
+}
+
+concert > img {
+  object-fit: cover;
+  max-width: 5rem;
+  max-height: 10rem;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.biopage > main > video {
+  width: 100%    !important;
+  max-height: 70vh;
+  height: auto   !important;
+  object-fit: cover;
+}
+@media only screen and (min-width: 1340px) {
+  .biopage > main * {
+    width: 25% !important;
+    width: auto !important;
+  }
+  .biopage > main * {
+    max-width: 90%;
+  }
+  .biopage > main * {
+    margin-left: 5%;
+  }
+}

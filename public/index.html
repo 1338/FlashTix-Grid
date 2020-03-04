@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="tweet.css" type="text/css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div class="page" id="home" data-active="0">
+        <header>
+            <a href="#home" class="menu-link"><div class="icon-wrapper"><i class='fa fa-home'></i>Home</div></a>
+            <a href="#home" class="menu-link"><div class="icon-wrapper">Welcome!</div></a>
+            <a href="#lastminute" class="menu-link"><div class="icon-wrapper">Lastminute<i class="fa fa-arrow-right"></i></div></a>
+        </header>
+        <main>
+            <h1>FlashTix</h1>
+            <img src="media/poster.png">
+        </main>
+    </div>
+
+    <div class="page" id="lastminute" data-active="0">
+        <header>
+            <a href="#home" class="menu-link"><div class="icon-wrapper"><i class='fa fa-arrow-left'></i>back</div></a>
+            <a href="#home" class="menu-link"><div class="icon-wrapper"><i class='fa fa-home'></i>Home</div></a>
+            <a href="#bestel" class="menu-link"><div class="icon-wrapper">Bestel<i class="fa fa-arrow-right"></i></div></a>
+        </header>
+        <main>
+          <category>
+            <h2>POP</h2>
+            <concert data-target="biopage-shakira">
+              <img src="media/shakiraposter.jpg">
+              <concert-info>
+                <h3>Shakira</h3>
+                <p>AmsterdamArena</p>
+                <p>Vandaag 22:00 uur</p>
+              </concert-info>
+            </concert>
+            <concert data-target="biopage-nielson">
+              <img src="media/nielsonposter.jpg">
+              <concert-info>
+                <h3>Nielson</h3>
+                <p>AmsterdamArena</p>
+                <p>Vandaag 20:00 uur</p>
+              </concert-info>
+            </concert>
+          </category>
+          <category>
+            <h2>JAZZ</h2>
+            <concert data-target="biopage-temptations">
+              <img src="media/temptationsposter.jpg">
+              <concert-info>
+                <h3>Temptations</h3>
+                <p>AmsterdamArena</p>
+                <p>Morgen 20:00 uur</p>
+              </concert-info>
+            </concert>
+          </category>
+          <category>
+            <h2>ROCK</h2>
+            <concert data-target="biopage-metallica">
+              <img src="media/metallicaposter.jpg">
+              <concert-info>
+                <h3>Metallica</h3>
+                <p>AmsterdamArena</p>
+                <p>Morgen 22:00 uur</p>
+              </concert-info>
+            </concert>
+          </category>
+        </main>
+    </div>
+    <div class="page biopage" id="biopage-shakira" data-active="0">
+        <header>
+            <a href="#lastminute" class="menu-link"><div class="icon-wrapper"><i class='fa fa-arrow-left'></i>back</div></a>
+            <a href="#home" class="menu-link"><div class="icon-wrapper"><i class='fa fa-home'></i>Home</div></a>
+            <a href="#bestel" class="menu-link"><div class="icon-wrapper">E-tickets<i class="fa fa-arrow-right"></i></div></a>
+        </header>
+        <main>
+            <video controls="controls" preload="auto" poster="media/shakiraposter.jpg">
+              <source src="media/shakira.mp4" type="video/mp4"/>
+              <source src="media/shakira.webm" type="video/webm" />
+              <source src="media/shakira.3gp" type="video/3gp" />
+            </video>
+            <h3>Shakira</h3>
+            <p>
+              Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60 populair geworden met de introductie van Letraset vellen met Lorem Ipsum passages en meer recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten.
+            </p>
+            <script type=”text/javascript” src=”http://twitter.com/statuses/user_timeline/Shakira.json?callback=twitterCallback2&count=1″></script>
+        </main>
+    </div>
+    <div class="page biopage" id="biopage-nielson" data-active="0">
+        <header>
+            <a href="#lastminute" class="menu-link"><div class="icon-wrapper"><i class='fa fa-arrow-left'></i>back</div></a>
+            <a href="#home" class="menu-link"><div class="icon-wrapper"><i class='fa fa-home'></i>Home</div></a>
+            <a href="#bestel" class="menu-link"><div class="icon-wrapper">E-tickets<i class="fa fa-arrow-right"></i></div></a>
+        </header>
+        <main>
+            <video controls="controls" preload="auto" poster="media/nielsonposter.jpg">
+              <source src="media/nielson.mp4" type="video/mp4"/>
+              <source src="media/nielson.webm" type="video/webm" />
+              <source src="media/nielson.3gp" type="video/3gp" />
+            </video>
+            <h3>Nielson</h3>
+            <p>
+              Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60 populair geworden met de introductie van Letraset vellen met Lorem Ipsum passages en meer recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten.
+            </p>
+            <twitter></twitter>
+        </main>
+    </div>
+    <div class="page biopage" id="biopage-temptations" data-active="0">
+        <header>
+            <a href="#lastminute" class="menu-link"><div class="icon-wrapper"><i class='fa fa-arrow-left'></i>back</div></a>
+            <a href="#home" class="menu-link"><div class="icon-wrapper"><i class='fa fa-home'></i>Home</div></a>
+            <a href="#bestel" class="menu-link"><div class="icon-wrapper">E-tickets<i class="fa fa-arrow-right"></i></div></a>
+        </header>
+        <main>
+            <video controls="controls" preload="auto" poster="media/temptationsposter.jpg">
+              <source src="media/temptations.mp4" type="video/mp4"/>
+              <source src="media/temptations.webm" type="video/webm" />
+              <source src="media/temptations.3gp" type="video/3gp" />
+            </video>
+            <h3>Temptations</h3>
+            <p>
+              Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60 populair geworden met de introductie van Letraset vellen met Lorem Ipsum passages en meer recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten.
+            </p>
+            <twitter></twitter>
+        </main>
+    </div>
+    <div class="page biopage" id="biopage-metallica" data-active="0">
+        <header>
+            <a href="#lastminute" class="menu-link"><div class="icon-wrapper"><i class='fa fa-arrow-left'></i>back</div></a>
+            <a href="#home" class="menu-link"><div class="icon-wrapper"><i class='fa fa-home'></i>Home</div></a>
+            <a href="#bestel" class="menu-link"><div class="icon-wrapper">E-tickets<i class="fa fa-arrow-right"></i></div></a>
+        </header>
+        <main>
+            <video controls="controls" preload="auto" poster="media/metallicaposter.jpg">
+              <source src="media/metallica.mp4" type="video/mp4"/>
+              <source src="media/metallica.webm" type="video/webm" />
+              <source src="media/metallica.3gp" type="video/3gp" />
+            </video>
+            <h3>Metallica</h3>
+            <p>
+              Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. Het heeft niet alleen vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60 populair geworden met de introductie van Letraset vellen met Lorem Ipsum passages en meer recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten.
+            </p>
+            <twitter></twitter>
+        </main>
+    </div>
+    <footer>
+      <a href="#agenda" class="menu-link"><div class="icon-wrapper"><i class="fa fa-calendar"></i>Agenda</div></a>
+      <a href="#location" class="menu-link"><div class="icon-wrapper">Location<i class="fa fa-search"></i></div></a>
+    </footer>
+    <script src="flashtix.js"></script>
+</body>
+</html>
