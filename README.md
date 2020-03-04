@@ -18,3 +18,9 @@ Cause I can!
  * Service worker (for caching, so it everything except fetching new tweets will work offline)
  * Responsive video player (scene switcher pauses video playback when you switch to another page)
  * Manifest so it can be installed as an web app on mobile
+
+## How to run
+In the root directory install deps:
+`npm i esm`
+Then run it via:
+`node server.js`
