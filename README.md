@@ -22,7 +22,7 @@ Cause I can!
 ## How to run
 In the root directory install deps:
 ```bash
-npm i esm
+npm i
 ```
 Then run it via:
 ```bash
